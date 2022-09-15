@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container-fluid register">
+        <section class="vh-100" style="background-color: #eee;">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-lg-12 col-xl-11">
+                        <div class="card text-black" style="border-radius: 25px;">
+                            <div class="card-body p-md-5">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+
+                                        <form class="mx-1 mx-md-4 registerForm">
+
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" id="registerUsername"
+                                                    placeholder="Enter username">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="password" class="form-control" id="registerPassword"
+                                                    placeholder="Enter password">
+                                            </div>
+                                            <div class="mb-3" id="roleSelect">
+                                                <select class="form-control roleSelect">
+                                                    <option value="">Select role</option>
+                                                    <option value="user">user</option>
+                                                    <option value="restaurant">restaurant</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3 budget-container">
+                                                <input type="number" class="form-control" id="budget"
+                                                    placeholder="Enter budget">
+                                            </div>
+
+                                            <div class="mb-3 d-flex justify-content-between">
+                                                <button type="submit" class="btn btn-primary"
+                                                    id="registerPageRegister">Register</button>
+                                                <button type="submit" class="btn btn-success" id="signIn">Sign
+                                                    in</button>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                    <div
+                                        class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                                            class="img-fluid" alt="Sample image">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <div class="container-fluid p-5 login">
+        <div class=" row loginPage ">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" id="login">Login</button>
+                <button type="submit" class="btn btn-success" id="register">Register</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <div class="admin-container">
+            <h1>ahsfdjasdasdj</h1>
+        </div>
+        <div class="user-container">
+            <div class="user-info d-flex justify content-between">
+                <h1 class="user-name"></h1>
+                <h1 class="user-budget"></h1>
+
+                <div class="table-part">
+                    <h1>All foods</h1>
+                    <div class="user-all-foods">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Food</th>
+                                        <th scope="col">Restaurant</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Order</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="user-all-foods-body">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="restaurant-container">
+            <div class="all-foods" style="display:flex;flex-wrap:wrap;">
+                <h1>All foods</h1>
+            </div>
+            <div class="new-food">
+                <div class="mb-3">
+                    <label for="foodName" class="form-label">Food name</label>
+                    <input type="text" class="form-control foodName">
+                </div>
+                <div class="mb-3">
+                </div>
+                <div class="new-food">
+                    <label for="foodPrice" class="form-label">Price</label>
+                    <input type="number" class="form-control foodPrice">
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary addNewFood">Add</button>
+                </div>
+            </div>
+            <div class="orders-list" style="position: absolute;margin-top: 300px;margin-right: 1000px;">
+                <h1>Orders List</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

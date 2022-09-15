@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./login.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container-fluid p-5 login-page">
+        <div class=" row loginPage ">
+            <form class="logInForm">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control emailInput">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control passwordInput">
+                </div>
+                <br>
+                <button class="btn btn-primary logInBtn">Login</button>
+            </form>
+        </div>
+
+
+       
+
+        <div class="container-fluid admin-panel">
+            <a type="button" class="btn btn-danger logout mt-2 mb-2">Log out</a>
+
+            <div class="col-md-12">
+                <h1>Approve Restaurants:</h1>
+                <table class="table mt-4">
+                    <thead>
+                        <tr id="tr_head">
+                            <th scope="col">Restaurant:</th>
+                            <th scope="col">Accept Button:</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body_adminpanel">
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="container-fluid restaurant-panel">
+            <div class="row">
+                <button type="button" class="btn btn-danger logout mt-2 mb-2">Log out</button>
+
+                <div class="col-md-4">
+                    <h1>Orders:</h1>
+                    <table class="table mt-4">
+                        <thead>
+                            <tr id="tr_head">
+                                <th scope="col">Customer:</th>
+                                <th scope="col">Food:</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body_restaurantpanel_orders">
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <h1>Foods:</h1>
+                    <table class="table mt-4">
+                        <thead>
+                            <tr id="tr_head">
+                                <th scope="col">Food:</th>
+                                <th scope="col">Price:</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body_restaurantpanel_foods">
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4">
+
+                    <form id="add_form" name="0" class="mt-2">
+                        <div class="form-group mt-2">
+                            <label for="name">Food name:</label>
+                            <input type="text" class="form-control mt-2" id="name" placeholder="name">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="price">Price:</label>
+                            <input type="number" class="form-control mt-2" id="price" placeholder="price">
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-2">Add</button>
+                    </form>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid customer-panel">
+            <button type="button" class="btn btn-danger logout mt-2 mb-2">Log out</button>
+
+            <div class="row">
+                <div class="col-md-3">passwordInput
+                    <h1>All foods:</h1>
+                    <table class="table mt-4">
+                        <thead>
+                            <tr id="tr_head">
+                                <th scope="col">Restaurant:</th>
+                                <th scope="col">Food:</th>
+                                <th scope="col">Price:</th>
+                                <th scope="col">Order:</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body_customerpanel_allfoods">
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-3">
+                    <h1>Eaten foods:</h1>
+                    <table class="table mt-4">
+                        <thead>
+                            <tr id="tr_head">
+                                <th scope="col">Restaurant:</th>
+                                <th scope="col">Food:</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body_customerpanel_eatenfoods">
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-3">
+                    <h1>Rejected foods:</h1>
+                    <table class="table mt-4">
+                        <thead>
+                            <tr id="tr_head">
+                                <th scope="col">Restaurant:</th>
+                                <th scope="col">Food:</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body_customerpanel_rejectedoods">
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-3">
+                    <h1>Waiting foods:</h1>
+                    <table class="table mt-4">
+                        <thead>
+                            <tr id="tr_head">
+                                <th scope="col">Restaurant:</th>
+                                <th scope="col">Food:</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body_customerpanel_waitingfoods">
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
+</body>
+
+</html>

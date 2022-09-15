@@ -1,0 +1,7 @@
+.register-page, .admin-panel, .restaurant-panel, .customer-panel{
+  display: none;
+}
+
+.col-md-4, .col-md-3, .col-md-12{
+  border: 1px solid black;
+}
